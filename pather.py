@@ -43,12 +43,12 @@ class Grid:
 						self.grid_array[marker2[0]][col_index] = "#"
 
 	def trace_markers(self):
-		if len(self.markers) > 2:
+		if len(self.markers) > 1:
 			for mark_index, mark in enumerate(self.markers):
 				if mark_index < (len(self.markers) - 1):
 					self.fill_path(mark, self.markers[mark_index + 1])
 		else:
-			print 'There must be at least 2 markers!'
+			print ('There must be at least 2 markers!')
 
 	def print_output(self, output_file):
 		self.output = open("output.txt", "w")
